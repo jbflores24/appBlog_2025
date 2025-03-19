@@ -1,0 +1,27 @@
+[
+  {
+    "id" : 1,
+    "name" : "Inicio",
+    "redirectTo" : "/home"
+  },
+  {
+    "id" : 2,
+    "name" : "Registrarse",
+    "redirectTo" : "/registro"
+  },
+  {
+    "id" : 3,
+    "name" : "Acceder",
+    "redirectTo" : "/home"
+  },
+  {
+    "id" : 4,
+    "name" : "",
+    "redirectTo" : "/home"
+  },
+  {
+    "id" : 5,
+    "name" : "Salir",
+    "redirectTo" : "/home"
+  }
+]
