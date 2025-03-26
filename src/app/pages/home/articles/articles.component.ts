@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Article } from 'src/app/interfaces/article.interface';
+import { ArticleService } from 'src/app/services/article/article.service';
 
 @Component({
   selector: 'app-articles',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./articles.component.css']
 })
 export class ArticlesComponent {
-
+  articles : Article[] = [];
+  constructor( private _as : ArticleService) {
+    this._as.getArticles().subscribe(
+      (resp:Article[]) => {
+        this.articles = resp;
+        console.log(this.articles);
+      }
+    );
+  }
 }

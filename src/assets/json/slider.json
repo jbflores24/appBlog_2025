@@ -1,0 +1,20 @@
+[
+  {
+    "id" : 1,
+    "imagen" : "./assets/img/slides/santorini1.jpg",
+    "titulo" : "Mi primer slider",
+    "descripcion" : "Descripción de mi primer slider"
+  },
+  {
+    "id" : 2,
+    "imagen" : "./assets/img/slides/florencia.jpg",
+    "titulo" : "Mi segundo slider",
+    "descripcion" : "Descripción de mi segundo slider"
+  },
+  {
+    "id" : 3,
+    "imagen" : "./assets/img/slides/venecia.jpg",
+    "titulo" : "Mi tercer slider",
+    "descripcion" : "Descripción de mi tercer slider"
+  }
+]

@@ -42,7 +42,7 @@
 
       <ul class="navbar-nav mb-2 mb-lg-0">
         <li class="nav-item" *ngFor="let item of menu">
-          <a class="nav-link" href="../index.php" *ngIf="item.id!=4">{{ item.name }}</a>
+          <a class="nav-link" [routerLink]=item.redirectTo *ngIf="item.id!=4">{{ item.name }}</a>
           <p class="text-white mt-2" *ngIf="item.id ==4"><i class="bi bi-person-circle"></i></p>
         </li>
       </ul>

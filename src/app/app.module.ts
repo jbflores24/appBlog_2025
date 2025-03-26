@@ -8,9 +8,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
-import { RegistroComponent } from './pages/registro/registro.component';
+import { RegistroComponent } from './pages/users/registro/registro.component';
 import { SliderComponent } from './pages/home/slider/slider.component';
 import { ArticlesComponent } from './pages/home/articles/articles.component';
+import { ComponentesModule } from './componentes/componentes.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ArticlesComponent } from './pages/home/articles/articles.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ComponentesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,10 @@
+
+<div class="card">
+  <img [src]=article.imagen class="card-img-top" />
+  <div class="card-body">
+    <h5 class="card-title">{{ article.titulo }}</h5>
+    <p><strong>{{ article.created_at |date:"medium"}}</strong></p>
+    <p class="card-text">{{ article.texto }}</p>
+    <a href="detalle.php" class="btn btn-primary">Ver más</a>
+  </div>
+</div>
