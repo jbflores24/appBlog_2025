@@ -7,10 +7,14 @@ import { Article } from 'src/app/interfaces/article.interface';
   providedIn: 'root'
 })
 export class ArticleService {
-
+  url = 'http://localhost:8000/api/article';
   constructor( private http : HttpClient) { }
 
   getArticles(): Observable<Article[]> {
     return this.http.get<Article[]>('./assets/json/article.json');
+  }
+
+  listadoArticulos(): Observable<Article[]> {
+    return this.http.get<Article[]>(`${this.url}`);
   }
 }

@@ -5,7 +5,7 @@
       <div class="card">
         <div class="card-header">Regístrate para poder comentar</div>
         <div class="card-body">
-          <form method="POST" action="">
+          <form #form="ngForm" (ngSubmit)="registro()">
             <div class="mb-3">
               <label for="nombre" class="form-label">Nombre:</label>
               <input
@@ -13,6 +13,8 @@
                 class="form-control"
                 name="nombre"
                 placeholder="Ingresa el nombre"
+                [(ngModel)]=user.name
+                required
               />
             </div>
 
@@ -23,6 +25,8 @@
                 class="form-control"
                 name="email"
                 placeholder="Ingresa el email"
+                [(ngModel)]=user.email
+                required
               />
             </div>
 
@@ -33,6 +37,8 @@
                 class="form-control"
                 name="password"
                 placeholder="Ingresa el password"
+                [(ngModel)]=user.password
+                required
               />
             </div>
 
@@ -45,6 +51,8 @@
                 class="form-control"
                 name="confirmar_password"
                 placeholder="Ingresa la confirmación del password"
+                [(ngModel)]=confirmar_password
+                required
               />
             </div>
 
@@ -53,6 +61,7 @@
               type="submit"
               name="registrarse"
               class="btn btn-primary w-100"
+              [disabled]="form.invalid"
             >
               <i class="bi bi-person-bounding-box"></i> Registrarse
             </button>

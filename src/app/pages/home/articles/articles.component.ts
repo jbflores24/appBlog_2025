@@ -13,7 +13,6 @@ export class ArticlesComponent {
     this._as.getArticles().subscribe(
       (resp:Article[]) => {
         this.articles = resp;
-        console.log(this.articles);
       }
     );
   }

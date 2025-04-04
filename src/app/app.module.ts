@@ -12,6 +12,10 @@ import { RegistroComponent } from './pages/users/registro/registro.component';
 import { SliderComponent } from './pages/home/slider/slider.component';
 import { ArticlesComponent } from './pages/home/articles/articles.component';
 import { ComponentesModule } from './componentes/componentes.module';
+import { FormsModule } from '@angular/forms';
+import { ListadoComponent } from './pages/users/listado/listado.component';
+import { GestionUsuariosComponent } from './pages/users/gestion-usuarios/gestion-usuarios.component';
+import { ListadoArticlesComponent } from './pages/articles/listado-articles/listado-articles.component';
 
 @NgModule({
   declarations: [
@@ -21,13 +25,17 @@ import { ComponentesModule } from './componentes/componentes.module';
     HomeComponent,
     RegistroComponent,
     SliderComponent,
-    ArticlesComponent
+    ArticlesComponent,
+    ListadoComponent,
+    GestionUsuariosComponent,
+    ListadoArticlesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ComponentesModule
+    ComponentesModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
