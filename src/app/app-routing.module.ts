@@ -5,6 +5,7 @@ import { RegistroComponent } from './pages/users/registro/registro.component';
 import { ListadoComponent } from './pages/users/listado/listado.component';
 import { GestionUsuariosComponent } from './pages/users/gestion-usuarios/gestion-usuarios.component';
 import { ListadoArticlesComponent } from './pages/articles/listado-articles/listado-articles.component';
+import { GestionArticleComponent } from './pages/articles/gestion-article/gestion-article.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path:'listadoArticulos',
     component : ListadoArticlesComponent
+  },
+  {
+    path: 'gestionArticle/:op/:id',
+    component: GestionArticleComponent
   },
   {
     path: '**',

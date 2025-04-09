@@ -17,4 +17,20 @@ export class ArticleService {
   listadoArticulos(): Observable<Article[]> {
     return this.http.get<Article[]>(`${this.url}`);
   }
+
+  postArticle (formData: FormData){
+    return this.http.post(`${this.url}`, formData);
+  }
+
+  getArticle(id: number) {
+    return this.http.get(`${this.url}/${id}`);
+  }
+
+  putArticle (formData: FormData, id: number){
+    return this.http.post(`${this.url}/actualizar/${id}`, formData);
+  }
+
+  deleteArticle (id: number){
+    return this.http.delete(`${this.url}/${id}`);
+  }
 }

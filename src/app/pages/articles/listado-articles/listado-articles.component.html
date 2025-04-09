@@ -4,7 +4,7 @@
       <h3 class="text-center">Lista de Artículos</h3>
     </div>
     <div class="col-sm-4">
-      <a href="crear_articulo.php" class="btn btn-success w-100"
+      <a [routerLink]="['/gestionArticle',1,0]" class="btn btn-success w-100"
         ><i class="bi bi-plus-circle-fill"></i> Nuevo Artículo</a
       >
     </div>
@@ -32,7 +32,7 @@
             <td>{{ article.texto }}</td>
             <td>{{ article.created_at | date:"medium"}}</td>
             <td>
-              <a href="editar_articulo.php" class="btn btn-warning"
+              <a [routerLink]="['/gestionArticle',2,article.id]" class="btn btn-warning"
                 ><i class="bi bi-pencil-fill"></i
               ></a>
             </td>

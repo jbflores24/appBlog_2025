@@ -1,0 +1,82 @@
+<div class="container mt-5 caja">
+  <div class="row"></div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h3 class="text-center">{{ tituloVentana }}</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 offset-3">
+      <form #formulario = "ngForm" enctype="multipart/form-data">
+        <input type="hidden" name="id" [(ngModel)] = articulo.id />
+
+        <div class="mb-3">
+          <label for="titulo" class="form-label">Título:</label>
+          <input
+            type="text"
+            class="form-control"
+            name="titulo"
+            id="titulo"
+            [(ngModel)] = articulo.titulo
+          />
+        </div>
+
+        <div class="mb-3" *ngIf="op==2">
+          <img
+            class="img-fluid img-thumbnail"
+            src="http://localhost:8000{{articulo.imagen}}"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="imagen" class="form-label">Imagen:</label>
+          <input
+            type="file"
+            class="form-control"
+            name="imagen"
+            id="imagen"
+            placeholder="Selecciona una imagen"
+            [(ngModel)] = articulo.imagen
+            (change) = "cargarImagen($event)"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="texto">Texto</label>
+          <textarea
+            class="form-control"
+            placeholder="Escriba el texto de su artículo"
+            name="texto"
+            style="height: 200px"
+            [(ngModel)] = articulo.texto
+          >ejemplo texto</textarea
+          >
+        </div>
+
+        <br />
+        <button *ngIf ="op==1"
+          (click) = "crearArticulo()"
+          name="editarArticulo"
+          class="btn btn-success float-left"
+        >
+          <i class="bi bi-person-bounding-box"></i>{{ tituloVentana}}
+        </button>
+        <button *ngIf ="op==2"
+          (click) = "editarArticulo()"
+          name="editarArticulo"
+          class="btn btn-success float-left"
+        >
+          <i class="bi bi-person-bounding-box"></i>{{ tituloVentana}}
+        </button>
+
+        <button *ngIf="op==2"
+          (click) = "borrarArticulo()"
+          name="borrarArticulo"
+          class="btn btn-danger float-right"
+        >
+          <i class="bi bi-person-bounding-box"></i> Borrar Artículo
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

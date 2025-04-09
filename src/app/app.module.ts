@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { ListadoComponent } from './pages/users/listado/listado.component';
 import { GestionUsuariosComponent } from './pages/users/gestion-usuarios/gestion-usuarios.component';
 import { ListadoArticlesComponent } from './pages/articles/listado-articles/listado-articles.component';
+import { GestionArticleComponent } from './pages/articles/gestion-article/gestion-article.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ListadoArticlesComponent } from './pages/articles/listado-articles/list
     ArticlesComponent,
     ListadoComponent,
     GestionUsuariosComponent,
-    ListadoArticlesComponent
+    ListadoArticlesComponent,
+    GestionArticleComponent
   ],
   imports: [
     BrowserModule,
