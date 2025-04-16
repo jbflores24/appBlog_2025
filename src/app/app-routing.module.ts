@@ -6,6 +6,9 @@ import { ListadoComponent } from './pages/users/listado/listado.component';
 import { GestionUsuariosComponent } from './pages/users/gestion-usuarios/gestion-usuarios.component';
 import { ListadoArticlesComponent } from './pages/articles/listado-articles/listado-articles.component';
 import { GestionArticleComponent } from './pages/articles/gestion-article/gestion-article.component';
+import { ListadoComentariosComponent } from './pages/comentarios/listado-comentarios/listado-comentarios.component';
+import { GestionComentarioComponent } from './pages/comentarios/gestion-comentario/gestion-comentario.component';
+import { DetalleComponent } from './pages/articles/detalle/detalle.component';
 
 const routes: Routes = [
   {
@@ -31,6 +34,18 @@ const routes: Routes = [
   {
     path: 'gestionArticle/:op/:id',
     component: GestionArticleComponent
+  },
+  {
+    path : 'listadoComentarios',
+    component: ListadoComentariosComponent
+  },
+  {
+    path: 'gestionComentario/:id',
+    component: GestionComentarioComponent
+  },
+  {
+    path: 'detalleArticulo/:id',
+    component: DetalleComponent
   },
   {
     path: '**',

@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Article } from 'src/app/interfaces/article.interface';
+import { environment } from 'src/environments/environment.development';
 
 @Component({
   selector: 'app-card',
@@ -8,4 +9,5 @@ import { Article } from 'src/app/interfaces/article.interface';
 })
 export class CardComponent {
   @Input() article : any;
+  rutaImagen = environment.baseImg;
 }

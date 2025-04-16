@@ -10,9 +10,10 @@ import { ArticleService } from 'src/app/services/article/article.service';
 export class ArticlesComponent {
   articles : Article[] = [];
   constructor( private _as : ArticleService) {
-    this._as.getArticles().subscribe(
-      (resp:Article[]) => {
-        this.articles = resp;
+    this._as.listadoArticulos().subscribe(
+      (resp:any) => {
+        this.articles = resp['data'];
+        console.log(this.articles);
       }
     );
   }
